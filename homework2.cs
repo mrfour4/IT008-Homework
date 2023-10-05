@@ -143,9 +143,10 @@ namespace Homewrok_2
                         int i = 0;
                         foreach (var student in ListStudents)
                         {
-                            if (idCourse == "all" || student.IdCourse == idCourse)
+                            if (idCourse == "ALL" || student.IdCourse == idCourse)
                             {
                                 writer.WriteLine($"{++i}, {student}");
+
                             }
                         }
 
@@ -203,7 +204,7 @@ namespace Homewrok_2
                     break;
 
                 case "export":
-                    manage.ExportData(args[1].ToLower(), args[2]);
+                    manage.ExportData(args[1].ToUpper(), args[2]);
                     break;
 
                 default:
